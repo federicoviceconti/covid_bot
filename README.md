@@ -1,6 +1,6 @@
 # CODIV-19 Bot
 
-This bot will show all the information about COVID-19.
+This bot will show all the information about COVID-19. Built with Dart and [teledart](https://pub.dev/packages/teledart) library.
 
 Current todo:
 - adding more commands
