@@ -9,6 +9,8 @@ environment:
 dependencies:
   teledart: ^0.0.50
   http: ^0.12.2
+  get_it: ^4.0.4
+  intl: ^0.16.1
 
 dev_dependencies:
   pedantic: ^1.8.0
