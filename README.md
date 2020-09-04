@@ -20,10 +20,10 @@ Current todo:
 - /up reply with a simple message, if bot is running
 
 ### How to deploy locally
-Deploy the bot in the current environment is simple:
+Steps to deploy the bot in local environment:
 1. Create a new bot using BotFather on Telegram
 2. Change into assets/environment.json the api-key
-3. Run locally and send the command by into the input field
+3. Run locally and send the command into the input field
 
 ### Credits
 
