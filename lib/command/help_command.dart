@@ -24,9 +24,9 @@ You can control me by sending these commands:
 /${HELP} show all available commands
 
 Hey! If you want to contribute, you can found this project on github also:
-https://github.com/federicoviceconti/covid_bot
+https\\://github.com/federicoviceconti/covid_bot
 
-Enjoy! 🌈
+Enjoy\\! 🌈
 ''', parse_mode: 'MarkdownV2');
   }
 }
