@@ -1,10 +1,11 @@
 # CODIV-19 Bot
 
+Now available at account **@Covid_Info_19_Bot.**
+
 This bot will show all the information about COVID-19. Built with Dart and [teledart](https://pub.dev/packages/teledart) library.
 
 Current todo:
 - adding more commands
-- deploy into an environment (at the moment is not reachable)
 
 ### Command supported
 
