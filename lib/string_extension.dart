@@ -3,8 +3,8 @@ extension StringExtension on String {
 
   String espaceCharacters() => 
     replaceAll('\_', '\\_')
-    .replaceAll('!', '\!')
-    .replaceAll(':', '\:')
-    .replaceAll('.', '\.')
-    .replaceAll('-', '\-');
+    .replaceAll('!', '\\!')
+    .replaceAll(':', '\\:')
+    .replaceAll('.', '\\.')
+    .replaceAll('-', '\\-');
 }
