@@ -1,13 +1,18 @@
 import 'dart:async';
-
+import 'package:covid_bot/command/command_utility.dart';
 import 'package:covid_bot/command/help_command.dart';
 import 'package:covid_bot/get_it_utils.dart';
 import 'package:teledart/teledart.dart';
-import 'command/command_utility.dart';
 
 StreamSubscription streamStart;
 
-void main(List<String> arguments) async {
+void main() async {
+  runZoned(() {
+    _startBotServer();
+  }, onError: (e, stackTrace) => print('Oh noes! $e $stackTrace'));
+}
+
+void _startBotServer() async {
   await setupGetIt();
   final teledart = getIt<TeleDart>();
   await _executeStartingActions(teledart);
