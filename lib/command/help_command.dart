@@ -23,7 +23,7 @@ You can control me by sending these commands:
 /${SEARCH_SUPPORTED_COUNTRY.espaceCharacters()} search if the input country is supported
 /${HELP} show all available commands
 
-Hey! If you want to contribute, you can found this project on github also:
+Hey\\! If you want to contribute, you can found this project on github also:
 https\\://github.com/federicoviceconti/covid_bot
 
 Enjoy\\! 🌈
