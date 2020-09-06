@@ -22,6 +22,11 @@ You can control me by sending these commands:
 /${SUPPORTED_COUNTRIES.espaceCharacters()} get all available countries supported by the bot
 /${SEARCH_SUPPORTED_COUNTRY.espaceCharacters()} search if the input country is supported
 /${HELP} show all available commands
+
+Hey! If you want to contribute, you can found this project on github also:
+https://github.com/federicoviceconti/covid_bot
+
+Enjoy! 🌈
 ''', parse_mode: 'MarkdownV2');
   }
 }

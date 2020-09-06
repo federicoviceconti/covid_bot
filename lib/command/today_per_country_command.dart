@@ -9,6 +9,8 @@ import 'package:teledart/model.dart';
 import 'package:teledart/teledart.dart';
 import 'package:covid_bot/teledart_extension.dart';
 
+import 'command_utility.dart';
+
 class TodayPerCountryCommand extends Command {
   TodayPerCountryCommand() : super(name: TODAY_PER_COUNTRY);
 
@@ -17,8 +19,7 @@ class TodayPerCountryCommand extends Command {
     await teleDart.waitingInformation(message);
 
     final responseSummary = await getIt<CovidApi>().getSummary();
-    await teleDart.replyMessage(message,
-        'Please, insert your country. If you don\'t find it, use /${SUPPORTED_COUNTRIES} command.');
+    await teleDart.insertYourCountryInfo(message);
 
     final sub = teleDart.onMessage(entityType: '*').listen((message) {
       final countriesFound = _filterCountriesByUserText(responseSummary.data.countryStatList, message.text);

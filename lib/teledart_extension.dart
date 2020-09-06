@@ -5,14 +5,14 @@ import 'package:teledart/teledart.dart';
 extension TeleDartExtension on TeleDart {
   static const int MAX_MESSAGE_LENGTH_TELEGRAM = 4096;
 
-  void replySequentialMessage(Message message, String text, {String parseMode}) async {
+  void replySequentialMessage(Message message, String text,
+      {String parseMode}) async {
     var currentIndexSplit = 0;
 
-    while(currentIndexSplit < text.length - 1) {
+    while (currentIndexSplit < text.length - 1) {
       final splitIndex = currentIndexSplit + MAX_MESSAGE_LENGTH_TELEGRAM;
-      final nextSplitIndex = splitIndex < text.length
-        ? splitIndex
-        : text.length - 1;
+      final nextSplitIndex =
+          splitIndex < text.length ? splitIndex : text.length - 1;
 
       final messageToSend = text.substring(currentIndexSplit, nextSplitIndex);
       await replyMessage(message, messageToSend, parse_mode: parseMode);
@@ -22,8 +22,12 @@ extension TeleDartExtension on TeleDart {
   }
 
   void replyAndCutOffMessage(Message message, String text) async {
-    final trucatedMessage = text.substring(0, text.length < (MAX_MESSAGE_LENGTH_TELEGRAM - 3) ? text.length : MAX_MESSAGE_LENGTH_TELEGRAM - 3);
-    await replyMessage(message, '$trucatedMessage...');
+    final trucatedMessage = text.substring(
+        0,
+        text.length < (MAX_MESSAGE_LENGTH_TELEGRAM - 3)
+            ? text.length
+            : MAX_MESSAGE_LENGTH_TELEGRAM - 3);
+    await replyMessage(message, '$trucatedMessage');
   }
 
   void waitingInformation(Message message) async {
@@ -32,6 +36,6 @@ extension TeleDartExtension on TeleDart {
 
   void insertYourCountryInfo(Message message) async {
     await replyMessage(message,
-        'Please, insert your country. If you don\'t find it, use /${SUPPORTED_COUNTRIES} command.');
+        'Please, insert your country. If you don\'t know what you have to input, use /${SUPPORTED_COUNTRIES} or /${SEARCH_SUPPORTED_COUNTRY} command.');
   }
 }

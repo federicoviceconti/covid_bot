@@ -12,7 +12,7 @@ class SearchSupportCountry extends Command {
 
   @override
   void execute(Message message, TeleDart teleDart) async {
-    await teleDart.replyMessage(message, 'Input the country that you want to find out');
+    await teleDart.replyMessage(message, 'Please input something and I will let you know which countries are supported! 😁');
     
     final subscription = teleDart.onMessage(entityType: '*').listen((countryInputMessage) async {
       await teleDart.waitingInformation(message);
