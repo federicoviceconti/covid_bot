@@ -7,21 +7,19 @@ import 'package:teledart/teledart.dart';
 StreamSubscription streamStart;
 
 void main() async {
-  runZoned(() {
-    _startBotServer();
-  }, onError: (e, stackTrace) => print('Oh noes! $e $stackTrace'));
+  _startBotServer();
 }
 
 void _startBotServer() async {
   await setupGetIt();
-  final teledart = getIt<TeleDart>();
-  await _executeStartingActions(teledart);
+  await _executeStartingActions();
 
   setupBotCommands();
 }
 
-void _executeStartingActions(TeleDart teledart) async {
+void _executeStartingActions() async {
   await streamStart?.cancel();
+  final teledart = getIt<TeleDart>();
 
   streamStart = teledart.onMessage(entityType: '*').listen((message) {
     HelpCommand().execute(message, teledart);    
