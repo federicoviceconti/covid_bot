@@ -7,6 +7,8 @@ This bot will show all the information about COVID-19. Built with Dart and [tele
 Current todo:
 - adding more commands
 
+I made a simple and brief tutorial on Medium: [how to create bot with Dart and TeleDart package and deploy on Heroku](https://medium.com/@viceconti.federico/how-to-deploy-your-telegram-bot-on-heroku-with-teledart-6ee197c0df91)
+
 ### Command supported
 
 **Data**
