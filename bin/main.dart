@@ -21,7 +21,7 @@ void _executeStartingActions() async {
   await streamStart?.cancel();
   final teledart = getIt<TeleDart>();
 
-  streamStart = teledart.onMessage(entityType: '*').listen((message) {
+  streamStart = teledart.onCommand('start').listen((message) {
     HelpCommand().execute(message, teledart);    
     streamStart?.cancel();
   });

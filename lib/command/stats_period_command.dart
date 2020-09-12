@@ -65,10 +65,6 @@ class StatsPeriodCommand extends Command {
 
       _filterSearchedDataByPeriod(
           teledart, message, totalCaseResponse, country);
-    } else {
-      Future.delayed(Duration(milliseconds: 500), () {
-        teledart.replyMessage(message, 'Country not supported 😞');
-      });
     }
   }
 
