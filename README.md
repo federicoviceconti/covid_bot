@@ -1,6 +1,7 @@
 # CODIV-19 Bot
 
 Now available at account **@Covid_Info_19_Bot.**
+NB: the bot is hosted on Heroky with a free plan. The dyno has a limitation, based on active hours)
 
 This bot will show all the information about COVID-19. Built with Dart and [teledart](https://pub.dev/packages/teledart) library.
 
