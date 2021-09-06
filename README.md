@@ -14,15 +14,15 @@ I made a simple and brief tutorial on Medium: [how to create bot with Dart and T
 ### Command supported
 
 **Data**
-- /today_per_country show data per country on current day
-- /today_global show global data on current day
-- /stats_period show data filtered by period (week, month)
+- /today_per_country - show data per country on current day
+- /today_global - show global data on current day
+- /stats_period - show data filtered by period (week, month)
 
 **Help**
-- /supported_countries get all available countries supported by the bot
-- /search_supported_country search if the input country is supported
-- /help show all available commands
-- /up reply with a simple message, if bot is running
+- /supported_countries - get all available countries supported by the bot
+- /search_supported_country - search if the input country is supported
+- /help - show all available commands
+- /up - check if bot is running, replying with a simple message
 
 ### How to deploy locally
 Steps to deploy the bot in local environment:
