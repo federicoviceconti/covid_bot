@@ -8,7 +8,7 @@ environment:
 
 dependencies:
   teledart: ^0.0.50
-  http: ^0.12.2
+  http: ^0.13.5
   get_it: ^4.0.4
   intl: ^0.16.1
 
